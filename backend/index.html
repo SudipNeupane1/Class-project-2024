@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Form</title>
+</head>
+<body>
+    <h1>Flask Form</h1>
+    
+    <form method="post" action="/">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Submitted Data</h2>
+    <ul>
+        {% for data in submitted_data %}
+            <li>{{ data.name }}, {{ data.age }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
